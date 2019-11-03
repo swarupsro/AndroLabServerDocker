@@ -11,6 +11,11 @@ FROM python:latest
 # The second parameter '/' is the path where to put the file on the image.
 # Here we put the file at the image root folder.
 COPY AndroLabServer /
+COPY InsecureBankv2 /
+COPY Spoilers /
+COPY Walkthroughs /
+COPY wip-attackercode /
+COPY InsecureBankv2.apk /
 
 # We need to define the command to launch when we are going to run the image.
 # We use the keyword 'CMD' to do that.
@@ -23,4 +28,5 @@ CMD [ "python", "/usr/lib/python2.7/dist-packages/easy_install.py cherrypy"]
 CMD [ "python", "/usr/lib/python2.7/dist-packages/easy_install.py web.py"]
 CMD [ "cd", "/AndroLabServer"]
 CMD [ "chmod +x", "app.py"]
-CMD [ "python", "./app.py" ]
+CMD [ "python", "app.py" ]
+CMD [ "python", "app.py --help" ]
