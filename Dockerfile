@@ -16,5 +16,5 @@ COPY AndroLabServer /
 # We use the keyword 'CMD' to do that.
 # The following command will execute "python ./main.py".
 #CMD [ "python", "./main.py" ]
-CMD [ "cd", "AndroLabServer"]
+CMD [ "cd", "/AndroLabServer"]
 CMD [ "python", "./app.py" ]
