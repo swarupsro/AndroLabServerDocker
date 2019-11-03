@@ -2,7 +2,7 @@
 # We use the keyword 'FROM' to do that.
 # In our example, we want import the python image.
 # So we write 'python' for the image name and 'latest' for the version.
-FROM ubuntu:latest
+FROM python:latest
 
 
 # In order to launch our python code, we must import it into our image.
@@ -17,4 +17,5 @@ COPY AndroLabServer /
 # The following command will execute "python ./main.py".
 #CMD [ "python", "./main.py" ]
 CMD [ "cd", "/AndroLabServer"]
+CMD [ "chmod +x", "app.py"]
 CMD [ "python", "./app.py" ]
