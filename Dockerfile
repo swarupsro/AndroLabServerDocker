@@ -16,6 +16,11 @@ COPY AndroLabServer /
 # We use the keyword 'CMD' to do that.
 # The following command will execute "python ./main.py".
 #CMD [ "python", "./main.py" ]
+CMD [ "python", "/usr/lib/python2.7/dist-packages/easy_install.py flask"]
+CMD [ "python", "/usr/lib/python2.7/dist-packages/easy_install.py flask-sqlalchemy"]
+CMD [ "python", "/usr/lib/python2.7/dist-packages/easy_install.py simplejson"]
+CMD [ "python", "/usr/lib/python2.7/dist-packages/easy_install.py cherrypy"]
+CMD [ "python", "/usr/lib/python2.7/dist-packages/easy_install.py web.py"]
 CMD [ "cd", "/AndroLabServer"]
 CMD [ "chmod +x", "app.py"]
 CMD [ "python", "./app.py" ]
