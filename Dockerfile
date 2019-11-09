@@ -16,11 +16,6 @@ COPY Spoilers /
 COPY Walkthroughs /
 COPY wip-attackercode /
 COPY InsecureBankv2.apk /
-
-# We need to define the command to launch when we are going to run the image.
-# We use the keyword 'CMD' to do that.
-# The following command will execute "python ./main.py".
-#CMD [ "python", "./main.py" ]
 CMD [ "python", "/usr/lib/python2.7/dist-packages/easy_install.py flask"]
 CMD [ "python", "/usr/lib/python2.7/dist-packages/easy_install.py flask-sqlalchemy"]
 CMD [ "python", "/usr/lib/python2.7/dist-packages/easy_install.py simplejson"]
@@ -28,5 +23,11 @@ CMD [ "python", "/usr/lib/python2.7/dist-packages/easy_install.py cherrypy"]
 CMD [ "python", "/usr/lib/python2.7/dist-packages/easy_install.py web.py"]
 CMD [ "cd", "/AndroLabServer"]
 CMD [ "chmod +x", "app.py"]
+
+# We need to define the command to launch when we are going to run the image.
+# We use the keyword 'CMD' to do that.
+# The following command will execute "python ./main.py".
+#CMD [ "python", "./main.py" ]
+
 CMD [ "python", "app.py" ]
 #CMD [ "python", "app.py --help" ]
