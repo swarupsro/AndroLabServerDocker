@@ -10,7 +10,7 @@ FROM ubuntu
 # The first parameter 'main.py' is the name of the file on the host.
 # The second parameter '/' is the path where to put the file on the image.
 # Here we put the file at the image root folder.
-CMD [ "sudo apt install python2.7 python-pip" ]
+
 COPY AndroLabServer /
 COPY InsecureBankv2 /
 COPY Spoilers /
@@ -18,12 +18,13 @@ COPY Walkthroughs /
 COPY wip-attackercode /
 COPY InsecureBankv2.apk /
 
-CMD [ "pip2 install flask"]
-CMD [ "pip2 install flask-sqlalchemy"]
-CMD [ "pip2 install simplejson"]
-CMD [ "pip2 install cherrypy"]
-CMD [ "pip2 install web.py"]
-CMD [ "chmod +x", "/AndroLabServer/app.py"]
+RUN sudo apt install python2.7 python-pip
+RUN pip2 install flask
+RUN pip2 install flask-sqlalchemy
+RUN pip2 install simplejson
+RUN pip2 install cherrypy
+RUN pip2 install web.py
+RUN chmod +x /AndroLabServer/app.py
 
 # CMD [ "python", "/usr/lib/python2.7/dist-packages/easy_install.py flask"]
 # CMD [ "python", "/usr/lib/python2.7/dist-packages/easy_install.py flask-sqlalchemy"]
