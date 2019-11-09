@@ -18,7 +18,7 @@ COPY Walkthroughs /
 COPY wip-attackercode /
 COPY InsecureBankv2.apk /
 
-RUN apt-get install python2.7.17~rc1-1
+RUN apt-get install python2.7-dev/eoan
 RUN pip2 install flask
 RUN pip2 install flask-sqlalchemy
 RUN pip2 install simplejson
