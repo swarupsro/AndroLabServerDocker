@@ -23,7 +23,9 @@ RUN pip2 install flask-sqlalchemy
 RUN pip2 install simplejson
 RUN pip2 install cherrypy
 RUN pip2 install web.py
-RUN chmod +x /AndroLabServer/app.py
+RUN pwd
+RUN ls
+RUN ls -al /AndroLabServer
 
 # CMD [ "python", "/usr/lib/python2.7/dist-packages/easy_install.py flask"]
 # CMD [ "python", "/usr/lib/python2.7/dist-packages/easy_install.py flask-sqlalchemy"]
