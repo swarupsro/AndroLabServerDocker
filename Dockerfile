@@ -2,7 +2,7 @@
 # We use the keyword 'FROM' to do that.
 # In our example, we want import the python image.
 # So we write 'python' for the image name and 'latest' for the version.
-FROM ubuntu
+FROM frolvlad/alpine-python2
 
 
 # In order to launch our python code, we must import it into our image.
@@ -18,7 +18,6 @@ COPY Walkthroughs /
 COPY wip-attackercode /
 COPY InsecureBankv2.apk /
 
-RUN apt search python | grep python2
 RUN pip2 install flask
 RUN pip2 install flask-sqlalchemy
 RUN pip2 install simplejson
