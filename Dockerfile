@@ -12,11 +12,11 @@ FROM frolvlad/alpine-python2
 # Here we put the file at the image root folder.
 
 COPY AndroLabServer /
-COPY InsecureBankv2 /
-COPY Spoilers /
-COPY Walkthroughs /
-COPY wip-attackercode /
-COPY InsecureBankv2.apk /
+# COPY InsecureBankv2 /
+# COPY Spoilers /
+# COPY Walkthroughs /
+# COPY wip-attackercode /
+# COPY InsecureBankv2.apk /
 
 RUN pip2 install flask
 RUN pip2 install flask-sqlalchemy
@@ -24,8 +24,7 @@ RUN pip2 install simplejson
 RUN pip2 install cherrypy
 RUN pip2 install web.py
 RUN pwd
-RUN ls
-RUN ls -al /AndroLabServer
+RUN ls -al
 
 # CMD [ "python", "/usr/lib/python2.7/dist-packages/easy_install.py flask"]
 # CMD [ "python", "/usr/lib/python2.7/dist-packages/easy_install.py flask-sqlalchemy"]
@@ -40,5 +39,5 @@ RUN ls -al /AndroLabServer
 # The following command will execute "python ./main.py".
 #CMD [ "python", "./main.py" ]
 #CMD [ "cd", "/AndroLabServer"]
-#CMD [ "python", "app.py" ]
+CMD [ "python", "app.py" ]
 #CMD [ "python", "app.py --help" ]
